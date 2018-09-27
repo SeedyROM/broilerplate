@@ -5,4 +5,5 @@
 /.shards/
 *.dwarf
 broil
+broilerplate
 sentry

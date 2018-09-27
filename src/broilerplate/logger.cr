@@ -1,23 +1,20 @@
 require "colorize"
 
 module Broilerplate::Logger
-  @@spacing = "    "
+  SPACING = "    "
+  LEVELS = [
+    {:name => :success, :color => :green, :symbol => "✓"},
+    {:name => :working, :color => :yellow, :symbol => "🏋️"},
+    {:name => :error, :color => :red, :symbol => "☠️"},
+  ]
 
-  @@success_color = :green
-  @@working_color = :yellow
-  @@error_color = :red
+  macro define_levels
+    {% for level in LEVELS %}
+      def self.{{level[:name].id}}(msg)
+        puts "{{level[:symbol].id}}#{SPACING}#{msg}".colorize({{level[:color]}})
+      end
+    {% end %}
+  end
 
-  @@success_symbol = "✓"
-  @@working_symbol = "🏋️"
-  @@error_symbol = "☠️"
-
-  def self.working(msg)
-    puts "#{@@working_symbol}#{@@spacing}#{msg}".colorize(@@working_color)
-  end
-  def self.success(msg)
-    puts "#{@@success_symbol}#{@@spacing}#{msg}".colorize(@@success_color)
-  end
-  def self.error(msg)
-    puts "#{@@error_symbol}#{@@spacing}#{msg}".colorize(@@error_color)
-  end
+  define_levels
 end
