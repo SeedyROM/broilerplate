@@ -1,6 +1,8 @@
 /docs/
+/dev/
 /lib/
 /bin/
 /.shards/
 *.dwarf
 broil
+sentry
