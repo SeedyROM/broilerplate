@@ -1,6 +1,7 @@
-# TODO: Write documentation for `Broilerplate`
+require "./broilerplate/*"
+
 module Broilerplate
   VERSION = "0.1.0"
 
-  # TODO: Put your code here
+  CLI.run
 end
