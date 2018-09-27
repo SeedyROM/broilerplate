@@ -1,10 +1,10 @@
 require "admiral"
-require "colorize"
 
 class Broilerplate::CLI < Admiral::Command
   class Generate < Admiral::Command
     def run
-      puts "Generating...".colorize(:yellow)
+      Logger.working("Generating...")
+      Logger.success("Generated!")
     end
   end
 
