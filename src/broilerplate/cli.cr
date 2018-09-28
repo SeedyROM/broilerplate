@@ -6,7 +6,6 @@ class Broilerplate::CLI < Admiral::Command
   class Generate < Admiral::Command
     def run
       Logger.working("Generating...")
-      Logger.success("Generated!")
     end
   end
 
