@@ -16,7 +16,7 @@ class Broilerplate::Template
 
     # The configuration YAML parser
     class ConfigParser
-        
+
     end
 
     property path : String
@@ -27,7 +27,7 @@ class Broilerplate::Template
     end
 
     def exists?
-        raise NotFound.new("Template not found") if !Dir.exists? @path
+        raise NotFound.new("Template directory not found") if !Dir.exists? @path
     end
 
     def configured?

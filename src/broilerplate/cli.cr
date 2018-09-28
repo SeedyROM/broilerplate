@@ -6,6 +6,7 @@ class Broilerplate::CLI < Admiral::Command
   class Generate < Admiral::Command
     def run
       Logger.working("Generating...")
+      template = Template.new("./data/test_template")
     end
   end
 
