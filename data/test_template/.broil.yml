@@ -1,2 +1,4 @@
 context: 
   replace_me: "Hello world!"
+args:
+  - project_name
