@@ -1,2 +1,2 @@
-args:
-  - project_name
+default_context:
+  replace_me: "Hello world!"

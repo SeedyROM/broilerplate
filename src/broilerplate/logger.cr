@@ -4,6 +4,7 @@ require "colorize"
 module Broilerplate::Logger
   # Set the default spacing value
   SPACING = "  "
+  
   # A constant used to help the `define_levels` macro
   LEVELS = [
     {:name => :success, :color => :green, :symbol => "✓"},
